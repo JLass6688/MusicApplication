@@ -1,0 +1,35 @@
+<h1>Artists#index</h1>
+<p>Find me in app/views/artists/index.html.erb</p>
+
+
+<form>
+	<input type="text" name="artist" id="artist">
+	<input type="submit" id="submit">
+</form>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		
+		$('#submit').on("click", function(evt){
+			evt.preventDefault();
+			var artistSearch = $('#artist').val();
+			console.log(artistSearch);
+			$.ajax({
+				method: 'post',
+				url: '/artists/show',
+				dataType: 'json',
+				data: {artist: artistSearch},
+				success: function(data){
+					console.log(data);
+
+				}
+			})
+		})
+	})
+	
+
+
+</script>

@@ -1,0 +1,2818 @@
+  [1m[36m (36.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150522165334)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (8.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150522165334"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150522165334)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.2ms)[0m  DROP TABLE "users"
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20150522165334"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150522165334)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150522165334)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (7.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150522165334"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (4.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-05-23 14:25:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (74.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 630ms (ActiveRecord: 109.6ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'):
+    3: <head>
+    4:   <title>MusicApplication</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__194601793672134115_70123605787340'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (61.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (193.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (77.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (244.1ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:25:22 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'):
+    3: <head>
+    4:   <title>MusicApplication</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/assets/javascripts/application.js:15
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__194601793672134115_70123605787340'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:25:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 311ms (Views: 310.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:25:42 -0500
+
+
+Started GET "/" for ::1 at 2015-05-23 14:26:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 212ms (Views: 201.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:26:54 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:26:58 -0500
+Processing by ArtistsController#index as HTML
+  Rendered artists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2015-05-23 14:27:11 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (105.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (207.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (65.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (146.7ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-05-23 14:27:27 -0500
+Processing by UsersController#profile as HTML
+  Rendered users/profile.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 69ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:27:35 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:30:18 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (175.6ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 3.8ms)
+
+ActionView::Template::Error (undefined local variable or method `submit' for #<#<Class:0x007faa563b8438>:0x007faa563aa978>):
+     7: 	<%= f.text_field :email %>
+     8: 	<%= f.label :password %>
+     9: 	<%= f.password_field :password %>
+    10: 	<%= submit %>
+    11: <% end %>
+  app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb__1347055897800002916_70184762236460'
+  app/views/welcome/index.html.erb:5:in `_app_views_welcome_index_html_erb__1347055897800002916_70184762236460'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (134.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:30:28 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:30:28 -0500
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:30:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUtiL+7d36MRGN23WuUhlk9gFIwyJzWPHgU3WRTfJCjDQQzM/i4Q6QyLgMnjDxj90ZJ7HKqDIJ/x8DnKdmZfiA==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Unpermitted parameter: email
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (26.0ms)[0m  [1mINSERT INTO "users" ("password_digest", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["password_digest", "$2a$10$h..vDKupOk1hPYBti0ZOkOnRLTsSNOsdc6i1u/sVUHa/Q1I4hFdsq"], ["created_at", "2015-05-23 19:30:38.816602"], ["updated_at", "2015-05-23 19:30:38.816602"]]
+PG::NotNullViolation: ERROR:  null value in column "email" violates not-null constraint
+DETAIL:  Failing row contains (1, null, $2a$10$h..vDKupOk1hPYBti0ZOkOnRLTsSNOsdc6i1u/sVUHa/Q1I4hFdsq, 2015-05-23 19:30:38.816602, 2015-05-23 19:30:38.816602).
+: INSERT INTO "users" ("password_digest", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 26.6ms)
+
+ActiveRecord::StatementInvalid (PG::NotNullViolation: ERROR:  null value in column "email" violates not-null constraint
+DETAIL:  Failing row contains (1, null, $2a$10$h..vDKupOk1hPYBti0ZOkOnRLTsSNOsdc6i1u/sVUHa/Q1I4hFdsq, 2015-05-23 19:30:38.816602, 2015-05-23 19:30:38.816602).
+: INSERT INTO "users" ("password_digest", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"):
+  app/controllers/users_controller.rb:4:in `create'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (55.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (130.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:31:13 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 45ms (Views: 38.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:31:13 -0500
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (48.2ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "hello@hello.com"], ["password_digest", "$2a$10$6jHy4/Fb4TxcZ6kJedH8VOAdRMIHGrFW1/QxuLbBM4PKJGEIQ1mii"], ["created_at", "2015-05-23 19:31:18.649981"], ["updated_at", "2015-05-23 19:31:18.649981"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 148ms (ActiveRecord: 49.3ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hello@hello.com"], ["password_digest", "$2a$10$cWedsegf.6WwRStflG1ei.FnNZqW/dELnsinxECuJ6NhJSWlBqPlm"], ["created_at", "2015-05-23 19:31:18.800009"], ["updated_at", "2015-05-23 19:31:18.800009"]]
+  [1m[35m (16.4ms)[0m  COMMIT
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 109ms (ActiveRecord: 17.2ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "hello@hello.com"], ["password_digest", "$2a$10$AyQyHVTy4DeYb7JStS7Z4.LjG0VbTC8rYQXD.nk2F2PWDLNIEbRq."], ["created_at", "2015-05-23 19:31:18.922940"], ["updated_at", "2015-05-23 19:31:18.922940"]]
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 99ms (ActiveRecord: 5.9ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hello@hello.com"], ["password_digest", "$2a$10$XXaX7slpOWQoNm/2nc5w6.zzIpNrFd2b/71v2s.1liU8rMvQKHu5u"], ["created_at", "2015-05-23 19:31:19.025475"], ["updated_at", "2015-05-23 19:31:19.025475"]]
+  [1m[35m (14.0ms)[0m  COMMIT
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 104ms (ActiveRecord: 14.5ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "hello@hello.com"], ["password_digest", "$2a$10$i0pHwiIVw7b/W3ASuRPG.OxDfGGVN8gDJOb60PYcGIBJvzJi8qnfe"], ["created_at", "2015-05-23 19:31:19.143049"], ["updated_at", "2015-05-23 19:31:19.143049"]]
+  [1m[36m (8.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 105ms (ActiveRecord: 8.8ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hello@hello.com"], ["password_digest", "$2a$10$RuWfm/qxlLrgvPmDYGMoVOkSmqulAhZrB2N.Po9FqDdcOvQz6U9tG"], ["created_at", "2015-05-23 19:31:19.260306"], ["updated_at", "2015-05-23 19:31:19.260306"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 99ms (ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:31:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "hello@hello.com"], ["password_digest", "$2a$10$NJu9wDiiyiqrQhKwRtHrt.WRfG/D9fOEZH80dJYdPhkplWnVj47rS"], ["created_at", "2015-05-23 19:31:19.362409"], ["updated_at", "2015-05-23 19:31:19.362409"]]
+  [1m[36m (11.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000users/profile
+Completed 302 Found in 102ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/users" for ::1 at 2015-05-23 14:32:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (144.1ms)
+
+
+Started POST "/users" for ::1 at 2015-05-23 14:32:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K77Rl9KXDclwvDlMtBgn1NVj6vqgLNO7ZJqAMOcS/+XJtL90wmTCg20vZDIN8h6/S5GFajiIxquLb46jhauERQ==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hello@hello.com"], ["password_digest", "$2a$10$RHASfqN1SzXbmDdkuBJXFOOcjj7VSeZc0fnXQNTpeMEbRk1DPXYSW"], ["created_at", "2015-05-23 19:32:15.841677"], ["updated_at", "2015-05-23 19:32:15.841677"]]
+  [1m[35m (10.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:32:15 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for ::1 at 2015-05-23 14:34:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 252ms (Views: 239.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:34:52 -0500
+
+
+Started GET "/" for ::1 at 2015-05-23 14:35:25 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 36.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:35:25 -0500
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:31 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (15.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 228ms (ActiveRecord: 16.1ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 89ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 88ms (ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 94ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 91ms (ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 94ms (ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:35:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mwyqHgL9a1kGCsW6vIocNX1pPtZhyCOuB3MbNQbAZgEZlxLaPg653mLdmhTGBEbSwfLa8EjNZ5X6ML/tqJ6OA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000artists
+Completed 302 Found in 92ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:37:21 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 44ms (Views: 34.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:37:21 -0500
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:37:26 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/oAvZ6EK1tnTqT6uxrLVui+Yer+oGSI6tVa4n+DouwF8G5ejnfkEXrd+YQC8PI9dkwOemYEcZgFIFRxHTrZTA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 107ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:37:26 -0500
+Processing by ArtistsController#index as HTML
+  Rendered artists/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:37:51 -0500
+Processing by ArtistsController#index as HTML
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:37:51 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:38:22 -0500
+Processing by ArtistsController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:38:22 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 42.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:38:22 -0500
+
+
+Started GET "/" for ::1 at 2015-05-23 14:38:30 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:38:30 -0500
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:38:32 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpCQ9fnvNM7JOwwQwgMWOYus68HoSEcKYItR8odpdNK8QTMAOsT/msVPKj1AGEOVy8YEOpB81ySAGx1ItfRGzA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 93ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:38:32 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:38:49 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:38:49 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:38:55 -0500
+Processing by ArtistsController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:38:56 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:40:09 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 40.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:40:09 -0500
+
+
+Started GET "/users/profile" for ::1 at 2015-05-23 14:40:13 -0500
+Processing by UsersController#profile as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-23 14:40:13 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-05-23 14:40:18 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hc5+gVC1nT+pEnAJdTcHdyCcB5IBbXut/Hp+xHBq8GhH/U7z2qWFK37Mw14pipePHd16WajNy/FKG9WKJjB1Xw==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 94ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 14:40:18 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-05-23 14:40:23 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (138.5ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-05-23 14:40:24 -0500
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/profile.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-05-23 14:40:55 -0500
+Processing by UsersController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/profile.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 14:40:55 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 15:38:46 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 15:39:01 -0500
+Processing by ArtistsController#show as HTML
+  Rendered artists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 15:46:09 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 57ms (Views: 47.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 15:46:09 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 15:46:15 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 15:46:15 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 15:46:18 -0500
+Processing by ArtistsController#show as HTML
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 15:46:18 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 15:58:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 239ms (Views: 207.4ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 15:58:20 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 15:58:20 -0500
+Processing by ArtistsController#show as JSON
+Redirected to 
+Completed 500 Internal Server Error in 289ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/artists_controller.rb:6:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (22.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (97.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (154.9ms)
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 15:58:26 -0500
+Processing by ArtistsController#show as HTML
+Redirected to 
+Completed 500 Internal Server Error in 292ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/artists_controller.rb:6:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (132.2ms)
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 15:58:43 -0500
+Processing by ArtistsController#show as HTML
+Completed 200 OK in 179ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 15:58:48 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 63ms (Views: 50.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 15:58:48 -0500
+Processing by ArtistsController#show as JSON
+Completed 200 OK in 190ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/hello" for ::1 at 2015-05-23 16:01:38 -0500
+
+ActionController::RoutingError (No route matches [GET] "/artists/hello"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (61.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (140.6ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:05:00 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:05:00 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:05:00 -0500
+Processing by ArtistsController#show as JSON
+Completed 200 OK in 330ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:05:31 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:05:31 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:05:31 -0500
+Processing by ArtistsController#show as JSON
+Completed 200 OK in 169ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:23:12 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 5.2ms)
+
+SyntaxError (/Users/JLass6688/MusicApp/MusicApplication/app/views/artists/index.html.erb:8: syntax error, unexpected keyword_end
+'.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+                                    ^
+/Users/JLass6688/MusicApp/MusicApplication/app/views/artists/index.html.erb:30: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/JLass6688/MusicApp/MusicApplication/app/views/artists/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/artists/index.html.erb:8: syntax error, unexpected keyword_end
+  app/views/artists/index.html.erb:30: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/artists/index.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (65.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (148.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:23:33 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `submit' for #<#<Class:0x007ffba88b2918>:0x007ffba9051110>):
+    4: 
+    5: <%= form_tag('/artists/post', method: :get) do %>
+    6: 	<%= text_field_tag :artist %>
+    7: 	<%= submit "Find", :id => 'submit' %>
+    8: <% end %>
+    9: 
+   10: 
+  app/views/artists/index.html.erb:7:in `block in _app_views_artists_index_html_erb__2768748137919323030_70359402610540'
+  app/views/artists/index.html.erb:5:in `_app_views_artists_index_html_erb__2768748137919323030_70359402610540'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (134.5ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:23:48 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:23:48 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:23:48 -0500
+Processing by ArtistsController#show as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+URI::InvalidURIError (bad URI(is not URI?): http://api.bandsintown.com/artists/#{ artist }/events.json?api_version=2.0&app_id=YOUR_APP_ID):
+  app/controllers/artists_controller.rb:5:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (69.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (146.9ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:26:27 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:26:27 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:26:34 -0500
+Processing by ArtistsController#show as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+URI::InvalidURIError (bad URI(is not URI?): http://api.bandsintown.com/artists/#{ artist }/events.json?api_version=2.0&app_id=YOUR_APP_ID):
+  app/controllers/artists_controller.rb:5:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (69.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (67.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (144.7ms)
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:27:28 -0500
+Processing by ArtistsController#show as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+URI::InvalidURIError (bad URI(is not URI?): http://api.bandsintown.com/artists/#{ artist }/events.json?api_version=2.0&app_id=YOUR_APP_ID):
+  app/controllers/artists_controller.rb:5:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (72.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (136.6ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:28:14 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 31.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:28:15 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:28:20 -0500
+Processing by ArtistsController#show as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/artists_controller.rb:5:in `+'
+  app/controllers/artists_controller.rb:5:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (73.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (65.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (142.3ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:38:10 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:38:10 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:38:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:38:11 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:38:32 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:38:32 -0500
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:38:37 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 775ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:39:30 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:39:30 -0500
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:39:33 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 400ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:39:59 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 54ms (Views: 43.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:39:59 -0500
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:40:03 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+URI::InvalidURIError (bad URI(is not URI?): http://api.bandsintown.com/artists/#{artist}/events.json?api_version=2.0&app_id=YOUR_APP_ID):
+  app/controllers/artists_controller.rb:5:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (70.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (145.3ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:40:14 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 51ms (Views: 40.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:40:15 -0500
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:40:18 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 133ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:40:45 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 96ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:40:49 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:40:49 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:41:04 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:41:04 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:41:05 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:41:05 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:41:07 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:41:07 -0500
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:41:11 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 2570ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/show?artist=" for ::1 at 2015-05-23 16:42:11 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 137ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:42:32 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:42:33 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:42:36 -0500
+Processing by ArtistsController#show as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/artists_controller.rb:5:in `+'
+  app/controllers/artists_controller.rb:5:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (71.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (137.9ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:43:35 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 36.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:43:35 -0500
+
+
+Started POST "/artists" for ::1 at 2015-05-23 16:43:39 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 126ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists" for ::1 at 2015-05-23 16:43:51 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 81ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:45:16 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 44.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:45:16 -0500
+
+
+Started GET "/artists/show" for ::1 at 2015-05-23 16:45:20 -0500
+Processing by ArtistsController#show as JSON
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of nil into String):
+  app/controllers/artists_controller.rb:6:in `+'
+  app/controllers/artists_controller.rb:6:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (105.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (161.5ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:46:25 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 37.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:46:25 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:46:28 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 126ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:47:16 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 58ms (Views: 46.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:47:16 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:47:19 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 89ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:47:49 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 35.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:47:49 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:47:52 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 138ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:48:24 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:48:24 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:48:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:48:25 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:48:27 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>""}
+Completed 200 OK in 79ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:49:21 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:49:21 -0500
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:49:33 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:49:34 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:49:39 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"Skrillex"}
+Completed 200 OK in 207ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:58:42 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 54ms (Views: 44.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:58:42 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:58:43 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:58:46 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"Skrillex"}
+Completed 500 Internal Server Error in 697ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/artists_controller.rb:8:in `show'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (67.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (140.8ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:58:59 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 53ms (Views: 40.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:58:59 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:59:02 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"Skrillex"}
+Completed 200 OK in 254ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 16:59:11 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 38.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 16:59:11 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 16:59:16 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"Weezer"}
+Completed 200 OK in 262ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 17:02:35 -0500
+
+SyntaxError (/Users/JLass6688/MusicApp/MusicApplication/app/controllers/artists_controller.rb:10: syntax error, unexpected tSYMBEG, expecting '}'
+  		:tour => @tour_response
+  		 ^
+/Users/JLass6688/MusicApp/MusicApplication/app/controllers/artists_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end
+# Your Shared Secret: yUQJadcwT8ecMV1MwTJySQ
+                                            ^):
+  app/controllers/artists_controller.rb:10: syntax error, unexpected tSYMBEG, expecting '}'
+  app/controllers/artists_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (65.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (150.9ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-23 17:02:44 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 35.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/welcome.self-d600a61786e9d74102fed74b6114e0a2c77035569eed59fbff043440ef53b409.css?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-23 17:02:45 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-05-23 17:02:48 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"Skrillex"}
+Completed 200 OK in 382ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-26 09:34:16 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (75.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (244.6ms)
+
+
+Started GET "/" for ::1 at 2015-05-26 09:34:17 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (137.9ms)
+
+
+Started GET "/" for ::1 at 2015-05-26 09:34:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (73.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (193.0ms)
+Completed 200 OK in 827ms (Views: 700.1ms | ActiveRecord: 118.0ms)
+
+
+Started GET "/assets/welcome.self-a0fd886e3f7c1a84a267ee959a9d2d7bc69c2ee06d7d03f1b76d2547c12fc6e8.css?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/artists.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/users.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/artists.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/welcome.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2015-05-26 09:34:35 -0500
+
+
+Started POST "/sessions" for ::1 at 2015-05-26 09:34:46 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NEu7prZsqlAiYu6saMvy4ozdW9cKLLV15QZSqWV0Bw1VPkA/xYBhSJYw17Nrq8a0DNq3HqfXnP9jCnGk5G930A==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[35mUser Load (27.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 199ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/artists" for ::1 at 2015-05-26 09:34:46 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/artists/show" for ::1 at 2015-05-26 09:34:54 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"radiohead"}
+Completed 200 OK in 1809ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists/show" for ::1 at 2015-05-26 09:35:13 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"skrillex"}
+Completed 200 OK in 334ms (Views: 24.1ms | ActiveRecord: 0.0ms)
