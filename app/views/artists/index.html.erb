@@ -16,6 +16,7 @@
 		$('#submit').on("click", function(evt){
 			evt.preventDefault();
 			var artistSearch = $('#artist').val();
+			var artistSearch = artistSearch.replace(/\s+/g, '');
 			console.log(artistSearch);
 			$.ajax({
 				method: 'post',
