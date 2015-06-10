@@ -1,3 +1,359 @@
 // Place all the styles related to the artists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+@import 'animations';
+@import 'variables';
+
+
+//====================NAVIGATION-ICON
+div.menu-icon{
+	width: 15%;
+	height: 75px;
+	float: right;
+	cursor: pointer;
+	padding-top: 15px;
+	background-color: $complimentary_dark;
+	span{
+		width: 45px;
+		height: 10px;
+		background-color: white;
+		border-radius: 9px;
+		margin: 0 auto 5px;
+		display: block;
+	}
+}
+div.menu-icon:hover{
+	span{
+		background-color: $action_color;
+		transition: .3s;
+	}
+}
+
+//====================NAVIGATION MENU
+nav{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	left: 100%;
+	background-color: rgba(32,39,45,.95);
+	z-index: 3;
+	top: 75px;
+	padding: 100px 0;
+	overflow-y: scroll;
+	a{
+		font-family: $primary_font;
+		color: white;
+		font-size: 36pt;
+		text-align: center;
+		cursor: pointer;
+		width: 100%;
+		height: 100px;
+		margin: 0;
+		line-height: 100px;
+		display: block;
+	}
+	a:hover{
+		background-color: $action_color;
+		transition: .3s;
+	}
+	form{
+		width: 100%;
+		input[type="submit"]{
+			display: block;
+			width: 100%;
+			border: none;
+			background: none;
+			font-family: $primary_font;
+			color: white;
+			line-height: 100px;
+			height: 100px;
+			font-size: 36pt;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover{
+			background-color: $action_color;
+			transition: .3s;
+		}
+	}
+
+}
+
+body#artist-body{
+	//------Z-INDEX REFERENCE GUIDE
+	//SEARCH / MENU ICON: 4
+	//NAVIGATION MENU: 3
+	//ARTIST MENU: 2
+	//SOCIAL MEDIA COLUMN: 2
+	margin: 0;
+	
+	//====================SEARCH / MENU ICON
+	div#search-container{
+		width: 100%;
+		position: fixed;
+		top: 0;
+		overflow: auto;
+		z-index: 4;
+		//====================SEARCH FIELD
+		div#social-media{
+			width: 15%;
+			float: right;
+			background-color: $complimentary_dark;
+			height: 75px;
+		}
+		input{
+			float: left;
+			height: 75px;
+			border: none;
+			outline: none;
+			line-height: 55px;
+			padding: 10px;
+			font-family: $primary_font;
+			text-align: center;
+			font-size: 18pt;
+		}
+		input[type="text"]{
+			background-color: $complimentary_dark;
+			width: 55%;
+			color: white;
+		}
+		input[type="submit"]{
+			background-color: rgb(100,100,100);
+			color: white;
+			width: 15%;
+			cursor: pointer;
+		}
+		input[type="submit"]:hover{
+			background-color: $action_color;
+			transition: .3s;
+		}
+	}
+	//====================TOUR / NEWS MENU BUTTON
+	div#artist-menu{
+		width: 100px;
+		position: fixed;
+		left: 0;
+		top: 280px;
+		z-index: 2;
+		h5{
+			font-size: 12pt;
+			font-family: $primary_font;
+			color: white;
+			height: 50px;
+			width: 100%;
+			text-align: center;
+			line-height: 50px;
+			border: 3px solid $secondary_color_dark;
+			margin: 0;
+			cursor: pointer;
+		}
+		h5:nth-child(1){
+			background-color: $secondary_color_dark;
+			border-top-right-radius: 5px;
+		}
+		h5:nth-child(2){
+			border-bottom-right-radius: 5px;
+		}
+		h5:hover{
+			border-color: $action_color;
+			transition: .3s;
+		}
+	}
+	h3.section-header{
+		color: white;
+		text-align: center;
+		font-family: $primary_font;
+		font-size: 18pt;
+		margin: 0;
+		padding: 15px 0;
+	}
+	h2{
+		font-family: $primary_font;
+		color: white;
+		font-size: 18pt;
+		padding: 150px 0 0 120px;
+
+	}
+	//====================TOUR SECTION
+	section.tour{
+		background-image: image-url('tour-bkg.jpg');
+		background-attachment: fixed;
+		height: 700px;
+		top: 375px;
+		width: 70%;
+		overflow-y: scroll;
+	}
+	//====================TWITTER SECTION
+	section#twitter{
+		position: fixed;
+		right: 0;
+		top: 75px;
+		width: 30%;
+		background-color: $secondary_color_dark;
+		height: 100vh;
+		z-index: 2;
+		overflow-y: scroll;
+	}
+	//====================NEWS SECTION
+	section.news{
+		background-image: image-url('main-info-bkg.jpg');
+		background-attachment: fixed;
+		position: fixed;
+		overflow-y: scroll;
+		top: 0;
+		left: -100%;
+		height: 100vh;
+		margin-top: 75px;
+		width: 70%;
+		h2{
+			color: $complimentary_dark;
+		}
+	}
+	//===================LOADING SCREEN
+	div#loading{
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		background-color: rgb(32,39,45);
+		top: 0;
+		left: 0;
+		z-index: 5;
+		display: none;
+		img{
+			display: block;
+			margin: 20% 42%;
+		}
+	}
+	//====================TOUR ENTRY FORMAT
+	div.tour-container{
+		padding: 85px 0 0 120px;
+		div.tour-entry{
+			width: 90%;
+			border-radius: 5px;
+			margin: 10px auto;
+			overflow: auto;
+			font-family: $primary_font;
+			div.tour-left{
+				width: 20%;
+				float: left;
+				background-color: $complimentary_dark;
+			}
+			div.tour-center{
+				width: 60%;
+				float: left;
+				background-color: $secondary_color_dark;
+			}
+			div.tour-right{
+				width: 20%;
+				float: right;
+				background-color: $complimentary_dark;
+				height: 200px;
+				img{
+					max-width: 90%;
+					margin: 0 auto;
+					display: block;
+				}
+				h4{
+					font-size: 14pt;
+					color: white;
+					text-align: center;
+				}
+			}
+			h3{
+				font-size: 18pt;
+				text-align: center;
+				color: white;
+				height: 50px;
+				margin: 0;
+				line-height: 50px;
+			}
+			h3:nth-child(3){
+				height: 100px;
+			}
+		}
+	}
+	//====================NEWS ENTRY FORMAT
+	div.news-container{
+		padding: 15px 0 0 120px;
+		div{
+			width: 90%;
+			border-radius: 5px;
+			margin: 10px auto;
+			padding-bottom: 10px;
+			background-color: $secondary_color_dark;
+			font-family: $primary_font;
+			h3{
+				font-size: 18pt;
+				text-align: center;
+				color: white;
+				height: 50px;
+				margin: 0;
+				line-height: 50px;
+				background-color: $complimentary_dark;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
+			}
+			p{
+				font-size: 12pt;
+				text-align: left;
+				padding: 3%;
+				color: white;
+				margin-bottom: 0;
+			}
+			a{
+				font-size: 12pt;
+				color: white;
+				background-color: $action_color;
+				display: block;
+				height: 50px;
+				width: 125px;
+				margin: 0 auto;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 5px;
+				cursor: pointer;
+				outline: none;
+			}
+			a:hover{
+				opacity: .7;
+				transition: .3s;
+			}
+		}
+	}
+	//====================TWITTER ENTRY FORMAT
+	div.twitter-container{
+		font-family: $primary_font;
+		div.twitter-entry{
+			padding: 1%;
+			margin-bottom: 5px;
+			overflow: auto;
+			img{
+				float: left;
+				width: 25%;
+			}
+			p{
+				float: right;
+				width: 75%;
+				font-size: 12pt;
+				color: white;
+				margin: 0;
+				padding: 0 1%;
+			}
+		}
+	}
+}
+
+
+
+
+
+@import 'media';

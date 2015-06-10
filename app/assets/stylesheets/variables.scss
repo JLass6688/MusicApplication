@@ -1,0 +1,23 @@
+// FONTS
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+@font-face {
+  font-family: 'Null';
+  src:url('Null-Free.eot');
+  src:url('Null-Free.eot?#iefix') format('embedded-opentype'),
+    font-url('Null-Free.svg#Null-Free') format('svg'),
+    font-url('Null-Free.woff') format('woff'),
+    font-url('Null-Free.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// COLOR PALETTE
+$primary_color: #3f96bd;
+$secondary_color_dark: #145e85;
+$secondary_color_light: #93cde7;
+$complimentary_dark: #20272d;
+$action_color: #dc7d27;
+
+// FONTS 
+$primary_font: 'Oxygen', sans-serif;
+$logo_font: 'Null', sans-serif;

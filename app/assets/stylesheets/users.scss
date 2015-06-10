@@ -1,3 +1,144 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+*{
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+@import 'animations';
+@import 'variables';
+
+
+//=======================SIGN UP FORM STYLE
+body#signup-body{
+	background-image: image-url('main-bkg.jpg');
+	background-attachment: fixed;
+	div#logo-container{
+		width: 390px;
+		margin: 25px auto 10px;
+		overflow: auto;
+		padding: 10px 0;
+		max-width: 100%;
+		h1{
+			font-family: $logo_font;
+			font-size: 84pt;
+			text-align: center;
+			letter-spacing: 5px;
+			margin: 0;
+			color: white;
+			float: left;
+			display: block;
+		}
+		img{
+			width: 90px;
+			height: auto;
+			display: block;
+			position: relative;
+			margin: 0 3px 0 0;
+			opacity: 0;
+			float: left;
+			left: 0;
+			min-width: 90px;
+		}
+	}
+	div:nth-child(2){
+		width: 65%;
+		padding: 25px 25px;
+		margin: 25px auto;
+		border: 5px solid $secondary_color_light;
+		background-color: $secondary_color_dark;
+		border-radius: 5px;
+		h1{
+			font-size: 30pt;
+			text-align: center;
+			color: white;
+			font-weight: 700;
+			font-family: $primary_font;
+		}
+		span{
+			width: 100px;
+			border-bottom: 3px solid $secondary_color_light;
+			display: block;
+			margin: 0 auto;
+		}
+		form{
+			width: 59%;
+			margin: 50px auto 10px;
+			input{
+				display: block;
+				width: 100%;
+				background-color: white;
+				border: none;
+				border-radius: 5px;
+				height: 50px;
+				margin: 0 0 10px;
+				font-family: $primary_font;
+				font-size: 14pt;
+				padding: 5%;
+				color: $secondary_color_dark;
+				outline: none;
+			}
+			input[type="submit"]{
+				line-height: 10px;
+				background-color: $action_color;
+				color: white;
+				cursor: pointer;
+				outline: none;
+			}
+			input[type="submit"]:hover{
+				opacity: .9;
+				transition: .3s;
+			}
+		}
+		div#validation-detector{
+			height: 50px;
+			width: 58%;
+			margin: 0 auto;
+			position: relative;
+			top: -60px;
+		}
+		p{
+			font-size: 12pt;
+			color: white;
+			text-align: center;
+			font-family: $primary_font;
+		}
+	}
+}
+
+//=======================SIGN UP FORM STYLE
+body#user-body{
+	//=======Z-INDEX GUIDE
+	//menu icon - 4
+	//nav menu - 3
+	background-color: $primary_color;
+	nav{
+		top: 0;
+	}
+	div.menu-icon{
+		background: none;
+		position: fixed;
+		top: 15px;
+		right: 25px;
+		z-index: 4;
+		float: none;
+	}
+	h1{
+		font-family: $primary_font;
+		font-size: 24pt;
+		color: white;
+		text-align: center;
+		margin: 75px 0 0;
+	}
+}
+
+
+
+
+@import 'media';

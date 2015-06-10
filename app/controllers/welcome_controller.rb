@@ -1,10 +1,8 @@
 class WelcomeController < ApplicationController
 
-	
-  def index
-  	@user = User.new
- 	
-  end
+	#---------------------------------------WELCOME ACTIONS
+	def index
+			
+	end
 
-  
 end

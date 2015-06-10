@@ -2,6 +2,43 @@
 <html>
 <head>
   <title>MusicApplication</title>
+
+  <!-- TOUR TEMPLATE -->
+  <script type="text/template" id="tour-template">
+  	<div class="tour-entry">
+  		<div class="tour-left">
+		  	<h3>Venue:</h3>
+		  	<h3>Where:</h3>
+		  	<h3>When:</h3>
+	  	</div>
+	  	<div class="tour-center">
+		  	<h3><%%= venue.name %></h3>
+		  	<h3><%%= formatted_location %></h3>
+		  	<h3><%%= formatted_datetime %></h3>
+	  	</div>
+	  	<div class="tour-right">
+		  	<h4>Ticket Status: <%%= ticket_status %></h4><a href=<%% ticket_url =%>><%= image_tag("ticket.png") %></a>
+	  	</div>
+	</div>
+  </script>
+
+  <!-- NEWS TEMPLATE -->
+  <script type="text/template" id="news-template">
+  	<div class="news-entry">
+  		<h3><%%= name %></h3>
+  		<p><%%= summary %></p>
+  		<a href="">Read More</a>
+	</div>
+  </script>
+
+  <!-- TWITTER TEMPLATE -->
+  <script type="text/template" id="twitter-template">
+  	<div class="twitter-entry">
+  		<p><%%= text %></p>
+  		<img src=<%%= user.profile_image_url_https %>>
+	</div>
+  </script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>

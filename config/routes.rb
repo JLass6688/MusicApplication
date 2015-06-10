@@ -1,25 +1,26 @@
 Rails.application.routes.draw do
   
 
-  #ARTIST ROUTES
-  post 'artists/show' => 'artists#show'
-  get 'artists' => 'artists#index'
-
-
   #WELCOME ROUTES
   root 'welcome#index'
 
 
+  #ARTIST ROUTES
+  post '/artists/show' => 'artists#show'
+  get '/artists' => 'artists#index'
+
+
   #USERS ROUTES
-  get 'users/profile' => 'users#profile'
-  post 'users' => 'users#create'
-  patch 'users/:id' => 'users#update'
-  delete 'users/:id' => 'users#destroy'
+  get '/users/profile' => 'users#profile'
+  post '/users' => 'users#create'
+  patch '/users/update' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
+  get '/users/new'  => 'users#new'
 
 
   #SESSION ROUTES
-  post 'sessions' => 'sessions#signin'
-  delete 'sessions' => 'sessions#signout'
+  post '/sessions' => 'sessions#signin'
+  delete '/sessions' => 'sessions#signout'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

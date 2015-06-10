@@ -1,0 +1,7 @@
+<nav id="navigation">
+	<a href="/artists">Home</a>
+	<a href="/users/profile">My Profile</a>
+	<%= form_tag('/sessions', method: :delete) do %>
+	<%= submit_tag "Sign-Out" %>
+	<% end %>
+</nav>

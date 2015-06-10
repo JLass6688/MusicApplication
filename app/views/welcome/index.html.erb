@@ -1,20 +1,60 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<body id="home-body">
+
+	<section id="home-header">
+
+		<div id="header-container">
+			<!-- LOGO CONTAINER -->
+			<div id="logo-container">
+				<h1 class="fadeRight">ap</h1>
+				<%= image_tag("logo.png", :class => "logoFade")%>
+				<h1 class="fadeLeft">llo</h1>
+			</div>
+			<h5>UP TO DATE NEWS ON YOUR FAVORITE MUSICIANS</h5>
+			<%= form_tag('sessions', method: :post, :class => 'sign-in standard') do %>
+				<%= label_tag "SIGN IN", "SIGN IN" %>
+				<%= text_field_tag :email, nil, :placeholder => '...Email' %>
+				<%= password_field_tag :password, nil, :placeholder => '...Password' %>
+				<%= submit_tag "SUBMIT"%>
+			<% end %>
+			<p>Don't have an account? <a href="/users/new">Sign-Up!</a></p>
+		</div>
+		<%= image_tag("smoke.png")%>
+
+	</section>
 
 
-<%= form_for @user do |f| %>
-	<%= f.label :email %>
-	<%= f.text_field :email%>
-	<%= f.label :password %>
-	<%= f.password_field :password %>
-	<%= f.submit %>
-<% end %>
+	<section id="home-info">
+
+		<div class='icon-container'>
+			<%= image_tag("tour-icon.png", class: "icon")%>
+			<h3>Tour Schedule</h3>
+			<span></span>
+			<p>Stay up-to-date on your favorite artists latest tour schedule.</p>
+		</div>
+		<div class='icon-container'>
+			<%= image_tag("news-icon.png", class: "icon")%>
+			<h3>Latest News</h3>
+			<span></span>
+			<p>Catch the latest news about any artist from around the web.</p>
+		</div>
+		<div class='icon-container'>
+			<%= image_tag("twitter-icon.png", class: "icon")%>
+			<h3>Twitter Updates</h3>
+			<span></span>
+			<p>Receive the latest tweets from your favorite artist's Twitter feed.</p>
+		</div>
+
+	</section>
 
 
-<%= form_tag('sessions', method: :post) do %>
-	<%= label_tag :email %>
-	<%= text_field_tag :email %>
-	<%= label_tag :password %>
-	<%= password_field_tag :password %>
-	<%= submit_tag %>
-<% end %>
+	<section id="home-cta">
+
+
+		<h2>Start searching for your favorite artists now...</h2>
+		<a href="/users/new">SIGN-UP</a>
+
+
+	</section>
+
+
+</body>

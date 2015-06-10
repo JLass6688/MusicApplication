@@ -1,0 +1,149 @@
+
+@import 'animations';
+@import 'variables';
+
+
+
+// ==================================
+// 		950px
+// ==================================
+@media only screen and (max-width : 950px) {
+
+	// ==================================
+	// ARTIST PAGE 
+	// ==================================
+	body#artist-body{
+		//------Z-INDEX REFERENCE GUIDE
+		//SEARCH / MENU ICON: 4
+		//NAVIGATION MENU: 3
+		//ARTIST MENU: 2
+		//SOCIAL MEDIA COLUMN: 2
+		section.tour{
+			position: static;
+			width: 100%;
+		}
+		section#twitter{
+			position: static;
+			width: 100%;
+		}
+		section.news{
+			position: static;
+			margin-top: 0;
+			width: 100%;
+		}
+		div#artist-menu{
+			display: none;
+		}
+		div.tour-container{
+			padding: 85px 0 0;
+		}
+	}
+}
+
+// ==================================
+// 		850px
+// ==================================
+@media only screen and (max-width : 850px) {
+
+	// ==================================
+	// INDEX PAGE 
+	// ==================================
+	body#home-body{
+		section#home-info{
+			div{
+				h3{
+					font-size: 18pt;
+				}
+				p{
+					font-size: 14pt;
+				}
+			}
+		}
+	}
+}
+
+
+
+// ==================================
+// 		725px
+// ==================================
+@media only screen and (max-width : 725px) {
+
+	// ==================================
+	// INDEX PAGE 
+	// ==================================
+	body#home-body{
+		section#home-info{
+			padding-top: 370px;
+			div{
+				float: none;
+				width: 90%;
+				margin: 0 auto 25px;
+				h3{
+					font-size: 36pt;
+				}
+				p{
+					font-size: 24pt;
+				}
+			}
+		}
+	}
+	// ==================================
+	// SIGN UP PAGE
+	// ==================================
+	body#signup-body{
+		div{
+			width: 100%;
+			form{
+				
+			}
+		}
+	}
+	// ==================================
+	// ARTIST PAGE
+	// ==================================
+	body#artist-body{
+		div#search-container{
+			//====================NAVIGATION-ICON
+			div.menu-icon{
+				float: none;
+				display: block;
+				width: 100%;
+				background-color: $complimentary_dark;
+				border-bottom: 3px solid $secondary_color_light;
+			}
+			input[type="text"]{
+				width: 70%;
+			}
+			input[type="submit"]{
+				width: 30%;
+			}
+			div#social-media{
+				display: none;
+			}
+		}
+		section#twitter{
+			position: static;
+			width: 100%;
+		}
+	}
+}
+
+// ==================================
+// 		550px
+// ==================================
+@media only screen and (max-width : 550px) {
+
+	// ==================================
+	// INDEX PAGE 
+	// ==================================
+	body#home-body{
+		section#home-header{
+			div#header-container{
+				width: 90%;
+				left: 5%;
+			}	
+		}	
+	}
+
+}

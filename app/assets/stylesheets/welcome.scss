@@ -1,7 +1,225 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-body{
-	background-color: lightblue;
+*{
+	box-sizing: border-box;
 }
+
+a{
+	text-decoration: none;
+}
+
+@import 'animations';
+@import 'variables';
+
+//=====================================
+//				FORMS
+//=====================================
+
+
+//SIGN IN FORM
+form.standard{
+	width: 440px;
+	max-width: 100%;
+	margin: 0 auto;
+	border-radius: 5px;
+	label{
+		color: white;
+		display: block;
+		width: 100%;
+		background-color: $secondary_color_dark;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-family: $primary_font;
+		font-size: 12pt;
+		border-radius: 5px;
+	}
+	input{
+		height: 50px;
+		border: none;
+		width: 100%;
+		margin: 10px auto;
+		color: $secondary_color_dark;
+		display: block;
+		padding: 10px;
+		font-family: $primary_font;
+		font-size: 12pt;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+	}
+	input[type="submit"]{
+		background-color: $action_color;
+		color: white;
+		cursor: pointer;
+	}
+	input[type="submit"]:hover{
+		opacity: .9;
+		transition: .3s;
+	}
+}
+
+
+
+
+//=====================================
+//				HOME PAGE
+//=====================================
+body#home-body{
+	// ----Z-INDEX GUIDE:
+	// Menu Icon: 3
+	// Header Container: 2
+	// Cloud Image: 1
+	//
+	margin: 0;
+	padding: 0;
+	height: 1350px;
+	//====================HEADER
+	section#home-header{
+		background-image: image-url('main-bkg.jpg');
+		background-attachment: fixed;
+		height: 700px;
+		max-width: 100%;
+		position: relative;
+		div#header-container{
+			z-index: 2;
+			position: fixed;
+			top: 35px;
+			left: 15%;
+			width: 70%;
+			font-family: $primary_font;
+			div{
+				width: 390px;
+				margin: 0 auto 10px;
+				overflow: auto;
+				padding: 10px 0;
+				max-width: 100%;
+			}
+			h1{
+				font-family: $logo_font;
+				font-size: 84pt;
+				text-align: center;
+				letter-spacing: 5px;
+				margin: 0;
+				color: white;
+				float: left;
+				display: block;
+			}
+			h5{
+				font-size: 14pt;
+				text-align: center;
+				font-weight: 700;
+				margin: 0 auto 50px;
+				color: white;
+				padding: 2px;
+				border-bottom: 2px solid $secondary_color_light;
+				border-top: 2px solid $secondary_color_light;
+				width: 461px;
+				max-width: 100%;
+			}
+			img{
+				width: 90px;
+				height: auto;
+				display: block;
+				position: relative;
+				margin: 0 3px 0 0;
+				opacity: 0;
+				float: left;
+				left: 0;
+				min-width: 90px;
+			}
+			p{
+				text-align: center;
+				color: white;
+				font-size: 10pt;
+				a{
+					color: $secondary_color_light;
+					cursor: pointer;
+				}
+				a:hover{
+					border-bottom: 1px solid $secondary_color_light;
+				}
+			}
+		}
+		img{
+			min-width: 100%;
+			max-width: 100%;
+			position: relative;
+			margin-top: 550px;
+			z-index: 1;
+		}
+	}
+	//====================MAIN INFO
+	section#home-info{
+		background-image: image-url('main-info-bkg.jpg');
+		background-attachment: fixed;
+		overflow: auto;
+		padding-top: 520px;
+		font-family: $primary_font;
+		color: $secondary_color_dark;
+		// ICON / INFO CONTAINERS
+		div{
+			width: 33%;
+			float: left;
+			padding: 2%;
+			opacity: 0;
+			//ICONS
+			img{
+				width: 70%;
+				display: block;
+				margin: 0 auto;
+			}
+			//HEADERS
+			h3{
+				font-size: 24pt;
+				text-align: center;
+			}
+			//DIVIDER
+			span{
+				width: 100px;
+				border-bottom: 3px solid $secondary_color_light;
+				margin: 0 auto;
+				display: block;
+			}
+			//INFO
+			p{
+				font-size: 18pt;
+				text-align: center;
+				width: 50%;
+				margin: 24px auto;
+			}
+		}
+	}
+	//====================MAIN CTA
+	section#home-cta{
+		background-image: image-url('main-cta-bkg.jpg');
+		background-attachment: fixed;
+		padding: 100px 0;
+		font-family: $primary_font;
+		h2{
+			font-size: 30pt;
+			color: white;
+			text-align: center;
+		}
+		a{
+			font-size: 12pt;
+			color: white;
+			background-color: $action_color;
+			display: block;
+			height: 50px;
+			width: 125px;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 50px;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+		}
+	}
+}
+
+@import 'media';
+
+
+

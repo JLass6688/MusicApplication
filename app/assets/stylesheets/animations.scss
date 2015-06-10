@@ -1,0 +1,243 @@
+//ANIMATIONS
+
+
+//=================================================FADE OUT
+@-webkit-keyframes fadeOut{
+	0%{
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0);
+	}
+	100%{
+		opacity: 0;
+		-webkit-transform: translate3d(0,-50px,0);
+	}
+}
+
+@keyframes fadeOut{
+	0%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+	100%{
+		opacity: 0;
+		transform: translate3d(0,-50px,0);
+	}
+}
+
+.fadeOut{
+	-webkit-animation-name: fadeOut;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: fadeOut;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+//=================================================FADE IN
+@-webkit-keyframes fadeIn{
+	0%{
+		opacity: 0;
+		-webkit-transform: translate3d(0,50px,0);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0);
+	}
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+		transform: translate3d(0,50px,0);
+	}
+	100%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
+.fadeIn{
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease;
+	animation-name: fadeIn;
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+
+//=================================================FADE LEFT
+@-webkit-keyframes fadeLeft{
+	0%{
+		opacity: 0;
+		-webkit-transform: translate3d(50px,0,0);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0);
+	}
+}
+
+@keyframes fadeLeft{
+	0%{
+		opacity: 0;
+		transform: translate3d(50px,0,0);
+	}
+	100%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
+.fadeLeft{
+	-webkit-animation-name: fadeLeft;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: fadeLeft;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+
+//=================================================FADE RIGHT
+@-webkit-keyframes fadeRight{
+	0%{
+		opacity: 0;
+		-webkit-transform: translate3d(-50px,0,0);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0);
+	}
+}
+
+@keyframes fadeRight{
+	0%{
+		opacity: 0;
+		transform: translate3d(-50px,0,0);
+	}
+	100%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
+.fadeRight{
+	-webkit-animation-name: fadeRight;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: fadeRight;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+
+//=================================================LOGO ANIMATION
+@-webkit-keyframes logoFade{
+	0%{
+		opacity: 0;
+		-webkit-transform: translate3d(0,-50px,0);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translate3d(0,0,0);
+	}
+}
+
+@keyframes logo{
+	0%{
+		opacity: 0;
+		transform: translate3d(0,-50px,0);
+	}
+	100%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+
+.logoFade{
+	-webkit-animation-name: logoFade;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-name: logo;
+	animation-duration: 2s;
+	animation-fill-mode: f
+}
+
+//=================================================MENU ANIMATION
+@keyframes menuAnimationIn{
+	0%{
+		position: fixed;
+		left: 100%;
+	}
+	100%{
+		position: fixed;
+		left: 0;
+	}
+}
+
+.menuAnimationIn {
+	animation-name: menuAnimationIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes menuAnimationOut{
+	0%{
+		position: fixed;
+		left: 0;
+	}
+	100%{
+		position: fixed;
+		left: 100%;
+	}
+}
+
+.menuAnimationOut {
+	animation-name: menuAnimationOut;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+//=================================================ARTIST MENU ANIMATION
+//In
+@keyframes artistMenuIn{
+	0%{
+		position: absolute;
+		left: -100%;
+	}
+	100%{
+		left: 0;
+	}
+}
+
+.artistMenuIn {
+	animation-name: artistMenuIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+//Out
+@keyframes artistMenuOut{
+	0%{
+		position: absolute;
+		left: 0;
+	}
+	100%{
+		left: -100%;
+	}
+}
+
+.artistMenuOut {
+	animation-name: artistMenuOut;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+
+

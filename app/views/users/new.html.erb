@@ -1,0 +1,25 @@
+<body id="signup-body">
+
+	<a href="/">
+	<div id="logo-container">
+		<h1 class="fadeRight">ap</h1>
+		<%= image_tag("logo.png", :class => "logoFade")%>
+		<h1 class="fadeLeft">llo</h1>
+	</div>
+	</a>
+	
+	<div>
+		<h1>Sign-Up for an account.</h1>
+		<span></span>
+		<%= form_for @user do |f| %>
+			<%= f.text_field :email, :class => 'signup', :placeholder => "...Email" %>
+			<%= f.password_field :password, :class => 'signup', :placeholder => "...Password" %>
+			<%= f.submit "Create Account", :disabled => "disabled" %>
+		<% end %>
+		<div id="validation-detector"></div>
+		<p id="validation-message"></p>
+	</div>
+
+
+</body>
+
