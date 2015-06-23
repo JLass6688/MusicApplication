@@ -45,7 +45,31 @@ After I had planned out my application, designed the layout and necessary assets
 
 <a name="technology"/>
 ###Technology
+####Front End
+1) Backbone.js
+	a) Allows for dynamic rendering of searched content.
+	#####
+	b) AJAX calls that will allow for users to access their favorited artists, as well as information from our API.
+	######
+	c) Seperation of concerns, allowing clean organization of models, views, and controllers.
 
+2) Underscore.js
+	a) Used to create organized templates to be accessed by my Backbone views for data rendering.
+
+3) JQuery.js
+	a) Used for manipulation of DOM elements.
+	######
+	b) Also used as a requirement for Backbone.js. 
+####Back End
+1) Ruby on Rails
+
+2) PostgreSQL
+	a) Used to create my data tables to store User information, including user email, password, and eventually favorited artists.
 
 <a name="newfeatures"/>
 ###Upcoming Features
+1) *Favorited Artists* - allow users to store favorited artists in their profile, allowing for easy access to these artists.
+
+2) *Ability to Share* - allow users to share artist pages through their own social media channels. 
+
+3) *Multiple Social Media Channels* - include the artist Facebook link and Instagram link. 
