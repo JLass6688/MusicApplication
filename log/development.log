@@ -58365,3 +58365,684 @@ Started GET "/" for ::1 at 2015-06-09 15:11:27 -0500
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (91.9ms)
 Completed 200 OK in 229ms (Views: 228.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-17 00:25:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (53.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (245.3ms)
+Completed 200 OK in 1368ms (Views: 1367.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-43c3c05fd77400c6423b13ec50fa1b98d761798a270f13dc5f061944adc6635b.css?body=1" for ::1 at 2015-06-17 00:26:01 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-06-17 00:26:17 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (148.3ms)
+Completed 200 OK in 461ms (Views: 299.0ms | ActiveRecord: 141.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-06-17 00:26:30 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 99ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/media.self-1aac96faac5d54c444af5eff70e82e18e0ccf39c6939cb42d8c1b916dcfb5e9d.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/animations.self-3d96f735521587ca0110dc310746e736cfcd9d161bd718c5f70afb367a455dcc.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/variables.self-f0cee993c05ba0e108dd29d73dc46bdc428901b6741b51b325c6eb97f9254e2c.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/users.self-43c3c05fd77400c6423b13ec50fa1b98d761798a270f13dc5f061944adc6635b.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/artists.self-c125d647634b3de1662e2a29b713131239111c489d4273bc2426e2b02af7030e.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/welcome.self-cd883d507fc5ba38be48d8d80680543baa0e6df5c71d8aa08d89ee45937ebd4a.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/artists.self-e3c7d9965c361c335ba8de11e0afe9851f5412b9b47217b269c3ec3ab7df6e5b.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/underscore.self-4f5b2528815d8b1cd9b68b1a4bb1fe689696f8dcbc2c4a5104343b886ee68828.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/backbone.self-a3ce8a201b933d981bea69923ffe8e81291892008349158a0d22f6d36da073b0.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/users.self-1f354f75cc0a0987040be64c205a7e7aa6eee74fbaa04a8bb8ca470d1470b968.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/views.self-a4baabc6694af2f298cec80fbc28b4a15de9d2a3f89d104eeeea02ee48ed56ac.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/welcome.self-5e1a43ee4acedbfd6e49f6a7fdd213ec95a4aee206ac26c1d1b98783839ace4e.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/logo-7b46792fcdecd4eec66e9a9730e590951e483bc2f77f25ba81972bb0fb1edef9.png" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/main-bkg-5e273c582a7cce92556d21918c6865c3d3112b318bd1034ebf25fba0b88e7117.jpg" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started GET "/assets/Null-Free-f6e7bc8fa5d7557e9e3729e2185ab9f46f1889ad737320fb02b471048ba34c47.woff" for ::1 at 2015-06-17 00:26:30 -0500
+
+
+Started POST "/users" for ::1 at 2015-06-17 00:27:03 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFU8gDe+SDSdyxMcn93wwC3msAJFeV/NPPYzDBx0rxM3r8xDnQlARigf2oKpVPlUIWUeuRsUK/JRWvs7W4uFtw==", "user"=>{"email"=>"hello@hello.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (36.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hello@hello.com"], ["password_digest", "$2a$10$pxOoaaVL8eVrE7eALOxde.2TdyJboLv6ZivwhEwysC6fbjBDslgtC"], ["created_at", "2015-06-17 05:27:03.338997"], ["updated_at", "2015-06-17 05:27:03.338997"]]
+  [1m[35m (26.9ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 252ms (ActiveRecord: 63.7ms)
+
+
+Started GET "/artists" for ::1 at 2015-06-17 00:27:03 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered artists/_nav.html.erb (2.3ms)
+  Rendered artists/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 149ms (Views: 147.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/artists/show" for ::1 at 2015-06-17 00:27:21 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"shakeygraves"}
+Completed 200 OK in 1273ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ticket-2e67c00a1ffed313202a2be12d762c2bf0311870aaded78c205d431845628532.png" for ::1 at 2015-06-17 00:27:22 -0500
+
+
+Started GET "/" for ::1 at 2015-06-20 13:54:49 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (146.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (101.1ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (287.4ms)
+
+
+Started GET "/" for ::1 at 2015-06-20 22:39:27 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (604.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (100.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (309.6ms)
+
+
+Started GET "/" for ::1 at 2015-06-20 22:39:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (74.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (264.8ms)
+Completed 200 OK in 1235ms (Views: 1234.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-3d96f735521587ca0110dc310746e736cfcd9d161bd718c5f70afb367a455dcc.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/users.self-43c3c05fd77400c6423b13ec50fa1b98d761798a270f13dc5f061944adc6635b.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/artists.self-c125d647634b3de1662e2a29b713131239111c489d4273bc2426e2b02af7030e.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/welcome.self-cd883d507fc5ba38be48d8d80680543baa0e6df5c71d8aa08d89ee45937ebd4a.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/media.self-1aac96faac5d54c444af5eff70e82e18e0ccf39c6939cb42d8c1b916dcfb5e9d.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/variables.self-f0cee993c05ba0e108dd29d73dc46bdc428901b6741b51b325c6eb97f9254e2c.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-20 22:39:54 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/underscore.self-4f5b2528815d8b1cd9b68b1a4bb1fe689696f8dcbc2c4a5104343b886ee68828.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/backbone.self-a3ce8a201b933d981bea69923ffe8e81291892008349158a0d22f6d36da073b0.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/artists.self-e3c7d9965c361c335ba8de11e0afe9851f5412b9b47217b269c3ec3ab7df6e5b.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/users.self-1f354f75cc0a0987040be64c205a7e7aa6eee74fbaa04a8bb8ca470d1470b968.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/views.self-a4baabc6694af2f298cec80fbc28b4a15de9d2a3f89d104eeeea02ee48ed56ac.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/welcome.self-5e1a43ee4acedbfd6e49f6a7fdd213ec95a4aee206ac26c1d1b98783839ace4e.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/logo-7b46792fcdecd4eec66e9a9730e590951e483bc2f77f25ba81972bb0fb1edef9.png" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/smoke-6080611d9c31f02d4646ef7a4cf8700b9710775232dfb5faef82220429da532f.png" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/news-icon-206ac317ffdcdd8d9c7ced2a2222ac753c14282502d12c4e456c4bc1a385552e.png" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/tour-icon-bde971a687459c85d0bfdba44e4b401fcd6173f10d0bd948646357eee1d03860.png" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/twitter-icon-c8a338a76b648ce2c25296127c1da2939355b2870c78933d0c5848868a54a9e6.png" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/main-bkg-5e273c582a7cce92556d21918c6865c3d3112b318bd1034ebf25fba0b88e7117.jpg" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/Null-Free-f6e7bc8fa5d7557e9e3729e2185ab9f46f1889ad737320fb02b471048ba34c47.woff" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/main-info-bkg-7a56c43278b9f9da8518c598f799ced5125e448b4cb1fed4ecdedb92d3df2bec.jpg" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started GET "/assets/main-cta-bkg-62bf1d3eb0bf417c19febd29d5e7597434d4ed469a79a20bcc85420aab393383.jpg" for ::1 at 2015-06-20 22:39:55 -0500
+
+
+Started POST "/sessions" for ::1 at 2015-06-20 22:40:07 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5d+WuVSmUP8cnnpeUY9SIiToc6qUsVE9FCGOCZq9prMKRA5MzuMnSFiPP5IXVUitGaAKayaYIYclUviFO6mKA==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"SUBMIT"}
+  [1m[35mUser Load (27.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 433ms (ActiveRecord: 181.7ms)
+
+
+Started GET "/artists" for ::1 at 2015-06-20 22:40:07 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (9.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/_nav.html.erb (1.2ms)
+  Rendered artists/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 182ms (Views: 170.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/spiffygif_156x156-611ad84ca6a09d5f4cd236dbfa6b01ed12a0b43c1bc9160b59853af25abd8d6a.gif" for ::1 at 2015-06-20 22:40:08 -0500
+
+
+Started GET "/assets/tour-bkg-2894c463eb522fbaafcd8c933375ab553dc258bc9ac05bcf2bb171e585712d75.jpg" for ::1 at 2015-06-20 22:40:08 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-06-20 22:40:15 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"ironandwine"}
+Completed 200 OK in 1349ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists/show" for ::1 at 2015-06-20 22:40:31 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"shakeygraves"}
+Completed 200 OK in 1130ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ticket-2e67c00a1ffed313202a2be12d762c2bf0311870aaded78c205d431845628532.png" for ::1 at 2015-06-20 22:40:32 -0500
+
+
+Started GET "/artists" for ::1 at 2015-06-20 22:40:49 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/_nav.html.erb (0.6ms)
+  Rendered artists/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-06-23 14:21:34 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (146.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (104.3ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/JLass6688/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (307.5ms)
+
+
+Started GET "/" for ::1 at 2015-06-23 14:22:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (75.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (286.5ms)
+Completed 200 OK in 2006ms (Views: 2006.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-3d96f735521587ca0110dc310746e736cfcd9d161bd718c5f70afb367a455dcc.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/artists.self-c125d647634b3de1662e2a29b713131239111c489d4273bc2426e2b02af7030e.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/variables.self-f0cee993c05ba0e108dd29d73dc46bdc428901b6741b51b325c6eb97f9254e2c.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/media.self-1aac96faac5d54c444af5eff70e82e18e0ccf39c6939cb42d8c1b916dcfb5e9d.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/welcome.self-cd883d507fc5ba38be48d8d80680543baa0e6df5c71d8aa08d89ee45937ebd4a.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/users.self-43c3c05fd77400c6423b13ec50fa1b98d761798a270f13dc5f061944adc6635b.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/welcome.self-5e1a43ee4acedbfd6e49f6a7fdd213ec95a4aee206ac26c1d1b98783839ace4e.js?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/logo-7b46792fcdecd4eec66e9a9730e590951e483bc2f77f25ba81972bb0fb1edef9.png" for ::1 at 2015-06-23 14:22:05 -0500
+
+
+Started GET "/assets/smoke-6080611d9c31f02d4646ef7a4cf8700b9710775232dfb5faef82220429da532f.png" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/tour-icon-bde971a687459c85d0bfdba44e4b401fcd6173f10d0bd948646357eee1d03860.png" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/news-icon-206ac317ffdcdd8d9c7ced2a2222ac753c14282502d12c4e456c4bc1a385552e.png" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/twitter-icon-c8a338a76b648ce2c25296127c1da2939355b2870c78933d0c5848868a54a9e6.png" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/main-bkg-5e273c582a7cce92556d21918c6865c3d3112b318bd1034ebf25fba0b88e7117.jpg" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/Null-Free-f6e7bc8fa5d7557e9e3729e2185ab9f46f1889ad737320fb02b471048ba34c47.woff" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/main-info-bkg-7a56c43278b9f9da8518c598f799ced5125e448b4cb1fed4ecdedb92d3df2bec.jpg" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/assets/main-cta-bkg-62bf1d3eb0bf417c19febd29d5e7597434d4ed469a79a20bcc85420aab393383.jpg" for ::1 at 2015-06-23 14:22:06 -0500
+
+
+Started GET "/users/new" for ::1 at 2015-06-23 14:26:22 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (169.5ms)
+Completed 200 OK in 654ms (Views: 400.0ms | ActiveRecord: 215.9ms)
+
+
+Started GET "/users/new" for ::1 at 2015-06-23 14:28:25 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/media.self-1aac96faac5d54c444af5eff70e82e18e0ccf39c6939cb42d8c1b916dcfb5e9d.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/variables.self-f0cee993c05ba0e108dd29d73dc46bdc428901b6741b51b325c6eb97f9254e2c.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/welcome.self-cd883d507fc5ba38be48d8d80680543baa0e6df5c71d8aa08d89ee45937ebd4a.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/users.self-43c3c05fd77400c6423b13ec50fa1b98d761798a270f13dc5f061944adc6635b.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/animations.self-3d96f735521587ca0110dc310746e736cfcd9d161bd718c5f70afb367a455dcc.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/artists.self-c125d647634b3de1662e2a29b713131239111c489d4273bc2426e2b02af7030e.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/underscore.self-4f5b2528815d8b1cd9b68b1a4bb1fe689696f8dcbc2c4a5104343b886ee68828.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/welcome.self-5e1a43ee4acedbfd6e49f6a7fdd213ec95a4aee206ac26c1d1b98783839ace4e.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/artists.self-e3c7d9965c361c335ba8de11e0afe9851f5412b9b47217b269c3ec3ab7df6e5b.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/backbone.self-a3ce8a201b933d981bea69923ffe8e81291892008349158a0d22f6d36da073b0.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/users.self-1f354f75cc0a0987040be64c205a7e7aa6eee74fbaa04a8bb8ca470d1470b968.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/views.self-a4baabc6694af2f298cec80fbc28b4a15de9d2a3f89d104eeeea02ee48ed56ac.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/logo-7b46792fcdecd4eec66e9a9730e590951e483bc2f77f25ba81972bb0fb1edef9.png" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/main-bkg-5e273c582a7cce92556d21918c6865c3d3112b318bd1034ebf25fba0b88e7117.jpg" for ::1 at 2015-06-23 14:28:25 -0500
+
+
+Started GET "/assets/Null-Free-f6e7bc8fa5d7557e9e3729e2185ab9f46f1889ad737320fb02b471048ba34c47.woff" for ::1 at 2015-06-23 14:28:26 -0500
+
+
+Started GET "/" for ::1 at 2015-06-23 14:31:51 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 144ms (Views: 143.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-06-23 14:31:52 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLqap6Hb5BEbAwihRL2lv/U355pNHtJ2fdAxh1u/8eDsq2Bnkv9C0Luvbgn/09VajOY41PZm3xvKAyw45ojV2Q==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"SUBMIT"}
+  [1m[35mUser Load (75.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 335ms (ActiveRecord: 76.1ms)
+
+
+Started GET "/artists" for ::1 at 2015-06-23 14:31:53 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (9.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/_nav.html.erb (1.0ms)
+  Rendered artists/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 207ms (Views: 194.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/spiffygif_156x156-611ad84ca6a09d5f4cd236dbfa6b01ed12a0b43c1bc9160b59853af25abd8d6a.gif" for ::1 at 2015-06-23 14:31:53 -0500
+
+
+Started GET "/assets/tour-bkg-2894c463eb522fbaafcd8c933375ab553dc258bc9ac05bcf2bb171e585712d75.jpg" for ::1 at 2015-06-23 14:31:53 -0500
+
+
+Started POST "/artists/show" for ::1 at 2015-06-23 14:32:57 -0500
+Processing by ArtistsController#show as JSON
+  Parameters: {"artist"=>"shakeygraves"}
+Completed 200 OK in 1625ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/ticket-2e67c00a1ffed313202a2be12d762c2bf0311870aaded78c205d431845628532.png" for ::1 at 2015-06-23 14:32:59 -0500
+
+
+Started GET "/artists" for ::1 at 2015-06-23 14:33:19 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered artists/_nav.html.erb (0.9ms)
+  Rendered artists/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 144ms (Views: 141.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/profile" for ::1 at 2015-06-23 14:39:48 -0500
+Processing by UsersController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_nav.html.erb (1.6ms)
+  Rendered users/profile.html.erb within layouts/application (87.9ms)
+Completed 200 OK in 4457ms (Views: 4454.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-06-23 15:09:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3213.8ms)
+Completed 200 OK in 19030ms (Views: 19030.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-23 15:10:40 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (481.8ms)
+Completed 200 OK in 2973ms (Views: 2973.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-23 15:10:43 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (715.0ms)
+Completed 200 OK in 4086ms (Views: 4086.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-06-23 15:11:20 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1036.2ms)
+Completed 200 OK in 2886ms (Views: 2886.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for ::1 at 2015-06-23 15:11:25 -0500
+Processing by SessionsController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JzEyPfjwH03ZQZGJVjAhVRNom6nT6FShIC3NYyOqz8u7IMj9y9S5jHnt9yHtXlGwarlE52iQWcyX/tDcnp3r8g==", "email"=>"hello@hello.com", "password"=>"[FILTERED]", "commit"=>"SUBMIT"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "hello@hello.com"]]
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 486ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/artists" for ::1 at 2015-06-23 15:11:25 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered artists/_nav.html.erb (1.7ms)
+  Rendered artists/index.html.erb within layouts/application (355.8ms)
+Completed 200 OK in 1412ms (Views: 1408.4ms | ActiveRecord: 0.5ms)
