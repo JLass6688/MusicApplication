@@ -12,17 +12,21 @@
 <a name="overview"/>
 ###Overview
 Apollo Music Application is a one-stop-shop for tour schedule, twitter feed, and latest news articles on any music artist. Simply search for any music artist by name and Apollo will pull the results into a user friendly interface. 
-![Screen Shot](/apollo.gif)
+![Screen Shot](/apollomain1.png)
+![Screen Shot](/apollomain2.png)
+![Screen Shot](/apollomain3.png)
 ####Features
 1) *Search Feature*- quick and easy searching for any music artist. One search will pull in all of the below information, eliminating the need for multiple searches. 
 #####
 2) *Twitter Feeds*- allows the user to see the up-to-date Twitter feed of their favorite artists.
 #####
 3) *Touring Information*- allows users to browse the latest touring information, as well as links to purchase tickets. 
+![Screen Shot](/search1.png)
 #####
 4) *News Articles*- allows users to find the latest news articles about their favorite artists. 
+![Screen Shot](/search2.png)
 #####
-![Screen Shot](/apollo-search.gif)
+
 
 <a name="timeline"/>
 ###Timeline
