@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   #ARTIST ROUTES
   get '/artists/show' => 'artists#show'
+  get '/artists' => 'artists#index'
 
 
   #USERS ROUTES
