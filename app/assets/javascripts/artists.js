@@ -46,7 +46,7 @@ $(document).ready(function(){
 		var artistSearch = artistSearch.replace(/\s+/g, '');
 		function ajax1(){
 			app.dataSet = $.ajax({
-				method: 'post',
+				method: 'get',
 				url: '/artists/show',
 				dataType: 'json',
 				data: {artist: artistSearch},

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
 
   #ARTIST ROUTES
-  post '/artists/show' => 'artists#show'
+  get '/artists/show' => 'artists#show'
   get '/artists' => 'artists#index'
 
 
